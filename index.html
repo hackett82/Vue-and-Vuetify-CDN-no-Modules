@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>Vue App</title>
+  <script src="https://unpkg.com/vue@next"></script>
+  <script src="/components/myCard.js"></script>
+  <script src="/components/myMenu.js"></script>
+  <link href="https://cdn.jsdelivr.net/npm/@mdi/font@4.x/css/materialdesignicons.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/vuetify@2.x/dist/vuetify.min.css" rel="stylesheet">
+</head>
+
+<body>
+  <div id="app">
+    <v-app>
+      <my-menu></my-menu>
+    
+        
+      <div>
+        <ol>
+          <my-card v-for="card in cards" :todo="card" :index="card.id"> </my-card>
+        </ol>
+      </div>
+    </v-app>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/vue@2.x/dist/vue.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/vuetify@2.x/dist/vuetify.js"></script>
+  <script>
+
+    new Vue({
+      el: '#app',
+      vuetify: new Vuetify(),
+      components: {
+        "my-card": MyCard,
+        "my-menu": MyMenu
+      },
+      data() {
+        return {          
+          cards: [
+            { id:1, description: "Cool Things"},
+            { id:2, description: "Other Stuff"},
+            { id:3, description: "Lost Items"}
+          ]
+        };
+      }
+    })
+
+  </script>
+</body>
+
+</html>
