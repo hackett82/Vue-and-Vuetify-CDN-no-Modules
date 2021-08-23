@@ -18,7 +18,7 @@
         
       <div>
         <ol>
-          <my-card v-for="card in cards" :todo="card" :index="card.id"> </my-card>
+          <my-card v-for="card in cards" :card="card" :index="card.id"> </my-card>
         </ol>
       </div>
     </v-app>
@@ -38,9 +38,9 @@
       data() {
         return {          
           cards: [
-            { id:1, description: "Cool Things"},
-            { id:2, description: "Other Stuff"},
-            { id:3, description: "Lost Items"}
+            { id: 1, description: "Cool Things", color: "#0C1821" },
+            { id: 2, description: "Other Stuff", color: "#324A5F" },
+            { id: 3, description: "Lost Items", color: "#1B2A41" }
           ]
         };
       }
