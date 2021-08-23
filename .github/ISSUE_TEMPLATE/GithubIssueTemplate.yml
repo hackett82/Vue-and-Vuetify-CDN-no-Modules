@@ -3,4 +3,4 @@ name: Issue Entry
 description: Enter an issue with the project
 title: "[Tip]: Issue Entry"
 labels: [Tip, Enhancement]
-assignees:
+
