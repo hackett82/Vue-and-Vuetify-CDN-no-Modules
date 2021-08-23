@@ -1,0 +1,53 @@
+# https://docs.github.com/en/communities/using-templates-to-encourage-useful-issues-and-pull-requests/about-issue-and-pull-request-templates
+name: Issue Entry
+description: Enter an issue with the project
+title: "[Tip]: Issue Entry"
+labels: [Tip, Enhancement]
+
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for helpin me with this little practice project of mine. 
+  - type: input
+    id: Name
+    attributes:
+      label: Name of suggested change
+      description: What is the chnge you would like to see?
+      placeholder: ex. VUE add a computed item to component x
+    validations:
+      required: true
+
+  - type: textarea
+    id: info
+    attributes:
+      label: More information
+      description: Add more information on the change you would like to see.
+      render: shell
+    validations:
+      required: true
+
+  - type: dropdown
+    id: Level
+    attributes:
+      label: What is the level of difficulty?
+      description: What level of developer do you tthink this change is aimed at?
+      options:
+        - Beginner
+        - Intermediate
+        - Advanced
+    validations:
+      required: true
+
+  - type: checkboxes
+    id: location
+    attributes:
+      label: Where do you want this change?
+      description: Where would you like to see this change added? please be verbose.
+      options:
+        - label: New component
+          required: false
+        - label: front end/ visual?
+          required: false
+        - label: Update due to new VUE version?
+          required: false
