@@ -1,1 +1,6 @@
-
+# https://docs.github.com/en/communities/using-templates-to-encourage-useful-issues-and-pull-requests/about-issue-and-pull-request-templates
+name: Issue Entry
+description: Enter an issue with the project
+title: "[Tip]: Issue Entry"
+labels: [Tip, Enhancement]
+assignees:
